@@ -7,43 +7,46 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
-<body>
+<body class="live-page"> <!-- ✅ Προσθήκη της κλάσης για να στοχεύσουμε μόνο αυτή τη σελίδα -->
+
   <header class="site-header">
     <a href="index.html" class="logo">
       <img src="logo.jpg" alt="NTUA Radio Logo">
     </a>
+    <button id="dark-mode-toggle">🌙</button>
     <nav>
       <ul>
         <li><a href="index.html">Αρχική</a></li>
-      <li><a href="live.html">Ζωντανή Ροή</a></li>
-                <li class="dropdown">
-    <a href="schedule.html">Προγράμματα</a>
-    <div class="dropdown-content">
-        <a href="monday.html">Δευτέρα</a>
-        <a href="tuesday.html">Τρίτη</a>
-        <a href="wednesday.html">Τετάρτη</a>
-        <a href="thursday.html">Πέμπτη</a>
-        <a href="friday.html">Παρασκευή</a>
-        <a href="saturday.html">Σάββατο</a>
-        <a href="sunday.html">Κυριακή</a>
-    </div>
-</li>
+        <li><a href="live.html">Ζωντανή Ροή</a></li>
+        <li class="dropdown">
+          <a href="schedule.html">Προγράμματα</a>
+          <div class="dropdown-content">
+            <a href="monday.html">Δευτέρα</a>
+            <a href="tuesday.html">Τρίτη</a>
+            <a href="wednesday.html">Τετάρτη</a>
+            <a href="thursday.html">Πέμπτη</a>
+            <a href="friday.html">Παρασκευή</a>
+            <a href="saturday.html">Σάββατο</a>
+            <a href="sunday.html">Κυριακή</a>
+          </div>
+        </li>
         <li><a href="about.html">Σχετικά</a></li>
         <li><a href="contact.html">Επικοινωνία</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <!-- Ενότητα για το audio player -->
     <section class="audio-section">
       <h2>Ζωντανή Ροή</h2>
-<audio class="plyr-audio" controls preload="auto">
-  <source src="https://api.allorigins.win/raw?url=http://radio.myaegean.gr:8000/playlist_cclounge.mp3" type="audio/mpeg">
-        Ο περιηγητής σας δεν υποστηρίζει το στοιχείο audio.
-      </audio>
+      <div class="player-container">
+        <audio class="plyr-audio" controls preload="auto">
+          <source src="https://api.allorigins.win/raw?url=http://radio.myaegean.gr:8000/playlist_cclounge.mp3" type="audio/mpeg">
+          Ο περιηγητής σας δεν υποστηρίζει το στοιχείο audio.
+        </audio>
+      </div>
     </section>
 
-    <!-- Ενότητα για το Live Chat -->
     <section class="chat-section">
       <h2>Live Chat</h2>
       <iframe 
@@ -57,23 +60,22 @@
     </section>
   </main>
 
-<footer>
+  <footer>
     <div class="social-icons">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <img src="facebook.jpg" alt="Facebook">
-        </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <img src="instagram.jpg" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <img src="spotify.jpg" alt="YouTube">
-        </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <img src="tiktok.jpg" alt="Twitter">
-        </a>
-         </div>
-
-<p> ΡΑΔΙΟΚΥΜΑ &copy; 2025</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img src="facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img src="instagram.jpg" alt="Instagram">
+      </a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img src="spotify.jpg" alt="YouTube">
+      </a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img src="tiktok.jpg" alt="Twitter">
+      </a>
+    </div>
+    <p> ΡΑΔΙΟΚΥΜΑ &copy; 2025</p>
   </footer>
 
   <!-- Scripts -->
@@ -84,5 +86,7 @@
       players.forEach(player => new Plyr(player));
     });
   </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

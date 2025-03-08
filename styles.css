@@ -190,7 +190,7 @@ color: #fff;
 /* Στυλ για το audio player */
 .audio-section,
 .chat-section {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 8px;
   margin-bottom: 40px;
   padding: 20px;
@@ -227,12 +227,52 @@ audio {
   outline: none;
 }
 
+
+
+
+
+
+
+.plyr--audio {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 100px;
+}
+
+
+.plyr__controls {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(0px);
+  border-radius: 10px;
+}
+
+.plyr__progress input {
+  background: #ff8a00 !important;
+}
+
+.plyr__controls button {
+  color: white !important;
+}
+
+.plyr__volume {
+  width: 35px; /* Μικρό κουμπί για αρχή */
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.plyr__controls:hover .plyr__volume {
+  width: 100px; /* Ανοίγει όταν περνάς τον κέρσορα */
+}
+
+
+
 /* Στυλ για το iframe του chat */
 .chat-section iframe {
-  width: 90%;
+  width: 100%;
   height: 500px;
   max-height: 90vh;
   border: none;
+  background-color: transparent !important; 
 }
 
 /* ================================ */
@@ -540,4 +580,75 @@ footer {
 
 .social-icons a:hover img {
     transform: scale(1.2);
+}
+
+
+
+
+.player-container {
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  background-size: cover;
+  padding: 0px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+/* Default Light Mode */
+body {
+  background-color: white;
+  color: black;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle Button */
+#dark-mode-toggle {
+  position: fixed;
+  top: 80px;
+  right: 17px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ Πιο απαλό Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e !important; /* Αντί για καθαρό μαύρο, ένα σκούρο γκρι */
+    color: #dcdcdc !important; /* Απαλό λευκό, όχι απόλυτο λευκό */
+}
+
+/* ✅ Ειδικά για τη σελίδα "live" */
+body.dark-mode.live-page main {
+    background: #252525 !important; /* Απαλό γκρι-μαύρο */
+    color: white !important;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* ✅ Κάνει τα sections πιο όμορφα */
+body.dark-mode .chat-section,
+body.dark-mode .audio-section {
+    background: linear-gradient(to right, #ff8a00, #e52e71) !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+body.dark-mode .player-container {
+  background: #222; /* Σκούρο γκρι, όχι απόλυτο μαύρο */
+  padding: 0px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
