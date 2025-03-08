@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stream - NTUA Radio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="NTUA Radio Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Αρχική</a></li>
+      <li><a href="live.html">Ζωντανή Ροή</a></li>
+                <li class="dropdown">
+    <a href="schedule.html">Προγράμματα</a>
+    <div class="dropdown-content">
+        <a href="monday.html">Δευτέρα</a>
+        <a href="tuesday.html">Τρίτη</a>
+        <a href="wednesday.html">Τετάρτη</a>
+        <a href="thursday.html">Πέμπτη</a>
+        <a href="friday.html">Παρασκευή</a>
+        <a href="saturday.html">Σάββατο</a>
+        <a href="sunday.html">Κυριακή</a>
+    </div>
+</li>
+        <li><a href="about.html">Σχετικά</a></li>
+        <li><a href="contact.html">Επικοινωνία</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Ενότητα για το audio player -->
+    <section class="audio-section">
+      <h2>Ζωντανή Ροή</h2>
+      <audio class="plyr-audio" controls>
+        <source src="http://radio.myaegean.gr:8000/playlist_cclounge.mp3" type="audio/mpeg">
+        Ο περιηγητής σας δεν υποστηρίζει το στοιχείο audio.
+      </audio>
+    </section>
+
+    <!-- Ενότητα για το Live Chat -->
+    <section class="chat-section">
+      <h2>Live Chat</h2>
+      <iframe 
+        src="https://organizations.minnit.chat/808702440957882/c/Main?embed" 
+        style="border:none; width:90%; height:500px; max-height:90vh;" 
+        allowTransparency="true">
+      </iframe>
+      <p class="fallback-chat" style="display: none;">
+        Το live chat δεν είναι διαθέσιμο αυτή τη στιγμή. <a href="https://organizations.minnit.chat/808702440957882/c/Main">Κάνε κλικ εδώ</a> για να το ανοίξεις σε νέο παράθυρο.
+      </p>
+    </section>
+  </main>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img src="facebook.jpg" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img src="instagram.jpg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img src="spotify.jpg" alt="YouTube">
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img src="tiktok.jpg" alt="Twitter">
+        </a>
+         </div>
+
+<p> ΡΑΔΙΟΚΥΜΑ &copy; 2025</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const players = document.querySelectorAll('.plyr-audio');
+      players.forEach(player => new Plyr(player));
+    });
+  </script>
+</body>
+</html>
