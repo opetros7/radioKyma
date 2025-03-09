@@ -875,37 +875,52 @@ body {
     transform: scale(1.1);
 }
 
-/* Σταθεροποιούμε το header για να μην επηρεάζεται */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-/* Προσθέτουμε padding στο body για να διασφαλίσουμε ότι δεν γίνεται καμία μετακίνηση */
+/* Εφαρμογή transition στο body για smooth αλλαγές */
 body {
-  padding-top: 80px; /* Προσαρμόστε το μέγεθος του padding ανάλογα με το ύψος του header */
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* Αλλαγές για dark/light mode */
-body.light-mode {
-  background-color: #fff; /* Φωτεινό background */
-  color: #333; /* Σκοτεινό κείμενο */
-}
-
+/* Κοινό στυλ για dark mode */
 body.dark-mode {
-  background-color: #121212; /* Σκοτεινό background */
-  color: #fff; /* Φωτεινό κείμενο */
+    background-color: #1e1e1e !important; /* Σκούρο γκρι φόντο */
+    color: #dcdcdc !important; /* Απαλό λευκό χρώμα κειμένου */
 }
 
-/* Αν το κουμπί dark/light είναι μέρος του header, φροντίστε να μην προκαλεί ανακατάταξη */
-.mode-toggle-button {
-  position: absolute;
-  top: 20px; /* Σταθερό για το κουμπί */
-  right: 20px;
-  z-index: 2000;
-  cursor: pointer;
+/* Στυλ για την dark mode σε άλλες περιοχές της σελίδας */
+body.dark-mode .chat-section,
+body.dark-mode .audio-section {
+    background: linear-gradient(to right, #ff8a00, #e52e71) !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 20px;
 }
+
+body.dark-mode .player-container {
+    background: #222; /* Σκούρο γκρι, όχι απόλυτο μαύρο */
+    padding: 0px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Για την ενεργοποίηση του light mode */
+body.light-mode {
+    background-color: white !important; /* Λευκό φόντο */
+    color: black !important; /* Μαύρο κείμενο */
+}
+
+/* Εφαρμογή smooth μετάβασης στο κουμπί dark-mode-toggle */
+#dark-mode-toggle {
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+/* Για το κουμπί κατά τη διάρκεια hover ή κλικ */
+#dark-mode-toggle:active {
+    transform: scale(1.1);
+}
+
+/* Μπορείς να προσθέσεις μετάβαση και σε άλλα στοιχεία που επηρεάζονται από το dark/light mode */
