@@ -849,3 +849,14 @@ body.dark-mode .player-container {
     top: 15px;
   }
 }
+body {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+#dark-mode-toggle {
+    transition: transform 0.2s ease-in-out;
+}
+
+#dark-mode-toggle:active {
+    transform: scale(1.1);
+}
