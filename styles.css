@@ -653,6 +653,11 @@ body.dark-mode .player-container {
   margin: 0 auto;
 }
 
+#dark-mode-toggle {
+    z-index: 2000;
+}
+
+
 /* Στυλ του κανονικού μενού */
 .nav-menu {
     display: flex;
