@@ -653,6 +653,141 @@ body.dark-mode .player-container {
   margin: 0 auto;
 }
 
+/* Στυλ του κανονικού μενού */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Στυλ dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Στυλ του hamburger menu για κινητά */
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Στυλ για κινητά */
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+/* Στυλ του κανονικού μενού */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Στυλ dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Στυλ του hamburger menu για κινητά */
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Στυλ για κινητά */
 @media screen and (max-width: 768px) {
     .menu-button {
         display: block;
