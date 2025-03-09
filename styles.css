@@ -227,12 +227,6 @@ audio {
   outline: none;
 }
 
-
-
-
-
-
-
 .plyr--audio {
   background: transparent !important;
   box-shadow: none !important;
@@ -263,7 +257,6 @@ audio {
 .plyr__controls:hover .plyr__volume {
   width: 100px; /* Ανοίγει όταν περνάς τον κέρσορα */
 }
-
 
 
 /* Στυλ για το iframe του chat */
@@ -600,7 +593,7 @@ footer {
 body {
   background-color: white;
   color: black;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 
 /* Toggle Button */
@@ -621,9 +614,11 @@ body {
 
 /* ✅ Πιο απαλό Dark Mode */
 body.dark-mode {
-    background-color: #1e1e1e !important; /* Αντί για καθαρό μαύρο, ένα σκούρο γκρι */
-    color: #dcdcdc !important; /* Απαλό λευκό, όχι απόλυτο λευκό */
+    background-color: #1e1e1e !important;
+    color: #dcdcdc !important;
+    transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
 }
+
 
 /* ✅ Ειδικά για τη σελίδα "live" */
 body.dark-mode.live-page main {
@@ -850,7 +845,7 @@ body.dark-mode .player-container {
   }
 }
 body {
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
 }
 
 #dark-mode-toggle {
@@ -890,6 +885,7 @@ body.dark-mode {
     background-color: #1e1e1e !important; /* Σκούρο γκρι φόντο */
     color: #dcdcdc !important; /* Απαλό λευκό κείμενο */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Σκιά για σκούρο mode */
+transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
 }
 
 /* Ειδικά για άλλες ενότητες σε dark mode */
@@ -899,7 +895,10 @@ body.dark-mode .audio-section {
     color: white !important;
     border-radius: 10px;
     padding: 20px;
-    transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;
 }
 
 body.dark-mode .player-container {
@@ -915,7 +914,10 @@ body.dark-mode .player-container {
 
 /* Στυλ για το toggle button */
 #dark-mode-toggle {
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;
 }
 
 /* Transition για το κουμπί κατά τη διάρκεια hover */
@@ -932,19 +934,29 @@ body.light-mode {
 
 /* Αν έχεις οποιοδήποτε άλλο στοιχείο που πρέπει να κάνει transition */
 .schedule-card, .logo img {
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;
 }
 
 /* Ειδικά για το dropdown */
 body.dark-mode .dropdown-content {
     background-color: #333; /* Σκούρο χρώμα για το dropdown */
-    transition: background-color 0.6s ease-in-out;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;;
 }
 
 body.light-mode .dropdown-content {
     background-color: white; /* Φως χρώμα για το dropdown */
-    transition: background-color 0.6s ease-in-out;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;;
 }
+
 body.live-page main {
     padding: 20px; /* Ίδιο padding και στις δύο λειτουργίες */
 }
@@ -955,4 +967,3 @@ body.dark-mode.live-page main {
     border-radius: 10px;
     /* Αφαίρεσε το padding αν είναι ίδιο */
 }
-
