@@ -945,3 +945,14 @@ body.light-mode .dropdown-content {
     background-color: white; /* Φως χρώμα για το dropdown */
     transition: background-color 0.6s ease-in-out;
 }
+body.live-page main {
+    padding: 20px; /* Ίδιο padding και στις δύο λειτουργίες */
+}
+
+body.dark-mode.live-page main {
+    background: #252525 !important;
+    color: white !important;
+    border-radius: 10px;
+    /* Αφαίρεσε το padding αν είναι ίδιο */
+}
+
