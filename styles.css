@@ -853,3 +853,59 @@ body {
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
+#dark-mode-toggle {
+    transition: transform 0.2s ease-in-out;
+}
+
+#dark-mode-toggle:active {
+    transform: scale(1.1);
+}
+
+#dark-mode-toggle {
+    width: 40px; /* Σταθερό πλάτος */
+    height: 40px; /* Σταθερό ύψος */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Σταθερό μέγεθος γραμματοσειράς */
+    transition: transform 0.2s ease-in-out;
+}
+
+#dark-mode-toggle:active {
+    transform: scale(1.1);
+}
+
+/* Σταθεροποιούμε το header για να μην επηρεάζεται */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Προσθέτουμε padding στο body για να διασφαλίσουμε ότι δεν γίνεται καμία μετακίνηση */
+body {
+  padding-top: 80px; /* Προσαρμόστε το μέγεθος του padding ανάλογα με το ύψος του header */
+}
+
+/* Αλλαγές για dark/light mode */
+body.light-mode {
+  background-color: #fff; /* Φωτεινό background */
+  color: #333; /* Σκοτεινό κείμενο */
+}
+
+body.dark-mode {
+  background-color: #121212; /* Σκοτεινό background */
+  color: #fff; /* Φωτεινό κείμενο */
+}
+
+/* Αν το κουμπί dark/light είναι μέρος του header, φροντίστε να μην προκαλεί ανακατάταξη */
+.mode-toggle-button {
+  position: absolute;
+  top: 20px; /* Σταθερό για το κουμπί */
+  right: 20px;
+  z-index: 2000;
+  cursor: pointer;
+}
