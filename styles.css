@@ -824,3 +824,9 @@ body.dark-mode .player-container {
         pointer-events: none; /* Απενεργοποιεί τα κλικ */
     }
 }
+@media screen and (min-width: 769px) {
+    .menu-button {
+        display: none !important;
+    }
+}
+
