@@ -1,24 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️'; // Ήλιος όταν είναι σκοτεινή λειτουργία
-    } else {
-        darkModeToggle.textContent = '🌙'; // Φεγγάρι όταν είναι φωτεινή λειτουργία
+    if (!darkModeToggle) {
+        console.log("❌ Το κουμπί dark mode δεν βρέθηκε!");
+        return;
     }
 
-    darkModeToggle.addEventListener('click', function () {
-        if (body.classList.contains('dark-mode')) {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('darkMode', 'disabled');
-            darkModeToggle.textContent = '🌙'; // Επιστροφή σε φεγγάρι
+    console.log("✅ Το κουμπί dark mode βρέθηκε!");
+
+    darkModeToggle.addEventListener("click", function () {
+        console.log("🌙 Κουμπί πατήθηκε!");
+        
+        if (document.body.classList.contains("dark-mode")) {
+            document.body.classList.remove("dark-mode");
+            darkModeToggle.textContent = "🌙";  // Επιστροφή στη σελήνη
+            console.log("🔆 Αλλαγή σε Light Mode!");
         } else {
-            body.classList.add('dark-mode');
-            localStorage.setItem('darkMode', 'enabled');
-            darkModeToggle.textContent = '☀️'; // Αλλαγή σε ήλιο
+            document.body.classList.add("dark-mode");
+            darkModeToggle.textContent = "☀️";  // Αλλαγή στον ήλιο
+            console.log("🌙 Αλλαγή σε Dark Mode!");
         }
     });
 });
