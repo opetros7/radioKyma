@@ -652,3 +652,40 @@ body.dark-mode .player-container {
   max-width: 1500px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown .dropdown-content {
+        display: none !important; /* Κρύβει το dropdown */
+        pointer-events: none; /* Απενεργοποιεί τα κλικ */
+    }
+}
