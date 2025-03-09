@@ -876,24 +876,30 @@ body {
 }
 
 
-/* Εφαρμογή transition στο body για smooth αλλαγές */
+
+/* Εφαρμογή transition σε περισσότερες ιδιότητες */
 body {
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: background-color 0.6s ease-in-out, 
+                color 0.6s ease-in-out, 
+                box-shadow 0.6s ease-in-out, 
+                border-color 0.6s ease-in-out;
 }
 
-/* Κοινό στυλ για dark mode */
+/* Στυλ για dark mode */
 body.dark-mode {
     background-color: #1e1e1e !important; /* Σκούρο γκρι φόντο */
-    color: #dcdcdc !important; /* Απαλό λευκό χρώμα κειμένου */
+    color: #dcdcdc !important; /* Απαλό λευκό κείμενο */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Σκιά για σκούρο mode */
 }
 
-/* Στυλ για την dark mode σε άλλες περιοχές της σελίδας */
+/* Ειδικά για άλλες ενότητες σε dark mode */
 body.dark-mode .chat-section,
 body.dark-mode .audio-section {
     background: linear-gradient(to right, #ff8a00, #e52e71) !important;
     color: white !important;
     border-radius: 10px;
     padding: 20px;
+    transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
 }
 
 body.dark-mode .player-container {
@@ -907,20 +913,35 @@ body.dark-mode .player-container {
     margin: 0 auto;
 }
 
-/* Για την ενεργοποίηση του light mode */
+/* Στυλ για το toggle button */
+#dark-mode-toggle {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Transition για το κουμπί κατά τη διάρκεια hover */
+#dark-mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Στυλ για το light mode */
 body.light-mode {
     background-color: white !important; /* Λευκό φόντο */
     color: black !important; /* Μαύρο κείμενο */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Λιγότερη σκιά για το light mode */
 }
 
-/* Εφαρμογή smooth μετάβασης στο κουμπί dark-mode-toggle */
-#dark-mode-toggle {
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+/* Αν έχεις οποιοδήποτε άλλο στοιχείο που πρέπει να κάνει transition */
+.schedule-card, .logo img {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Για το κουμπί κατά τη διάρκεια hover ή κλικ */
-#dark-mode-toggle:active {
-    transform: scale(1.1);
+/* Ειδικά για το dropdown */
+body.dark-mode .dropdown-content {
+    background-color: #333; /* Σκούρο χρώμα για το dropdown */
+    transition: background-color 0.6s ease-in-out;
 }
 
-/* Μπορείς να προσθέσεις μετάβαση και σε άλλα στοιχεία που επηρεάζονται από το dark/light mode */
+body.light-mode .dropdown-content {
+    background-color: white; /* Φως χρώμα για το dropdown */
+    transition: background-color 0.6s ease-in-out;
+}
