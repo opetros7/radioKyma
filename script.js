@@ -1,26 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("dark-mode-toggle");
+document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // ➜ Ελέγχει αν το Dark Mode ήταν ενεργό πριν
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
+    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️'; // Ήλιος όταν είναι σκοτεινή λειτουργία
+    } else {
+        darkModeToggle.textContent = '🌙'; // Φεγγάρι όταν είναι φωτεινή λειτουργία
     }
 
-    // ➜ Εναλλαγή Dark Mode On/Off
-    toggleButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        // Αποθηκεύει την επιλογή του χρήστη
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
+    darkModeToggle.addEventListener('click', function () {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+            darkModeToggle.textContent = '🌙'; // Επιστροφή σε φεγγάρι
         } else {
-            localStorage.setItem("darkMode", "disabled");
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+            darkModeToggle.textContent = '☀️'; // Αλλαγή σε ήλιο
         }
     });
-
-    // ➜ Προσθέτει κλάση "live-page" **μόνο αν η σελίδα είναι το live.html**
-    if (window.location.pathname.includes("live.html")) {
-        body.classList.add("live-page");
-    }
 });
