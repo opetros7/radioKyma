@@ -6,7 +6,7 @@
 .hero-section {
     text-align: center;
     padding: 300px 50px;
-    background: url('assets/images/2.jpg') center center/cover no-repeat;
+    background: url('../assets/images/2.jpg') center center/cover no-repeat;
     color: #0056C1;
     animation: fadeIn 1.5s ease-in-out;
   }
@@ -428,7 +428,7 @@
 /* Day Header (monday.html, etc) */
 
 .day-header {
-  background: url("assets/images/back.jpg") no-repeat center center;
+  background: url("../assets/images/back.jpg") no-repeat center center;
   background-size: cover;
   padding: 60px 20px;
   text-align: center;
