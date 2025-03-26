@@ -1,3 +1,10 @@
+/*THIS HAS BEEN SPLIT INTO BASE.CSS AND COMPONENTS.CSS, IT IS INCLUDED FOR NOW JUST FOR
+REFERENCE REASONS AND SHOULD BE DELETED IN THE FUTURE.*/
+
+/*Slight improvements have been made compared to the previous styles.css such as 
+deleting double definitions or fixing double ## issues. They are irrelevant since this file
+will no longer be used . */
+
 /* Reset βασικών στοιχείων - Μηδενίζει margins/padding για όλα τα στοιχεία */
 * {
   margin: 0;
@@ -152,8 +159,8 @@ main {
 .hero-section {
   text-align: center;
   padding: 300px 50px; /* Μεγάλο padding για hero section */
-  background: url('2.jpg') center center/cover no-repeat; /* 🚨 Λείπει # στο χρώμα */
-  color: ##0056C1; /* 🚨 Λάθος σύνταξη (διπλό ##) */
+  background: url('../assets/images/2.jpg') center center/cover no-repeat; /* 🚨 Λείπει # στο χρώμα */
+  color: #0056C1; 
   animation: fadeIn 1.5s ease-in-out; /* Εφάπαξ animation */
 }
 
@@ -216,7 +223,6 @@ color: #fff;
   margin-bottom: 20px;
   color: var(--text-color); /* Χρησιμοποιεί τη CSS μεταβλητή για χρώμα */
 }
-} /* 🚨 ΠΑΡΑΤΗΡΗΣΗ: Εδώ υπάρχει περιττή } που μπορεί να προκαλέσει σφάλμα */
 
 /* 🎧 Διπλότυπο CSS για audio-section - Μπορεί να προκαλέσει conflicts */
 .audio-section,
@@ -424,7 +430,7 @@ audio {
 /* ======================== */
 
 .day-header {
-  background: url("back.jpg") no-repeat center center;
+  background: url("../assets/images/back.jpg") no-repeat center center;
   background-size: cover; /* Καλύπτει όλο το περιεχόμενο */
   padding: 60px 20px;
   text-align: center;
@@ -443,15 +449,6 @@ audio {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px; /* Απόσταση μεταξύ καρτών */
   padding: 0 20px;
-}
-
-/* 🗓️ Κάρτα προγράμματος */
-.schedule-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Απαλή σκιά */
 }
 
 .schedule-card h3 {
@@ -497,7 +494,7 @@ audio {
 .day-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: ; /* 🚨 ΛΕΙΠΕΙ ΧΡΩΜΑ! */
+  background-color: var(--primary-color);
   color: #581845;
   border-radius: 10px;
   text-decoration: none;
@@ -514,20 +511,12 @@ audio {
   margin: 20px auto;
 }
 
-background-image: url('2.jpg');
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    background: //αν θες βαλε χρωμα 
+    /*background: black; /* we could have a background color for this if we choose to */
 }
 
 nav ul li {
