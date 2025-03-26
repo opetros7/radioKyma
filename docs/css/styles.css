@@ -159,7 +159,7 @@ main {
 .hero-section {
   text-align: center;
   padding: 300px 50px; /* Μεγάλο padding για hero section */
-  background: url('../assets/images/2.jpg') center center/cover no-repeat; /* 🚨 Λείπει # στο χρώμα */
+  background: url('assets/images/2.jpg') center center/cover no-repeat; /* 🚨 Λείπει # στο χρώμα */
   color: #0056C1; 
   animation: fadeIn 1.5s ease-in-out; /* Εφάπαξ animation */
 }
@@ -430,7 +430,7 @@ audio {
 /* ======================== */
 
 .day-header {
-  background: url("../assets/images/back.jpg") no-repeat center center;
+  background: url("assets/images/back.jpg") no-repeat center center;
   background-size: cover; /* Καλύπτει όλο το περιεχόμενο */
   padding: 60px 20px;
   text-align: center;
