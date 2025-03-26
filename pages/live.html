@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Stream - ΡΑΔΙΟΚΥΜΑ</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
 <body class="live-page"> <!-- ✅ Προσθήκη της κλάσης για να στοχεύσουμε μόνο αυτή τη σελίδα -->
 
   <header class="site-header">
     <a href="index.html" class="logo">
-      <img src="logo.jpg" alt="NTUA Radio Logo">
+      <img src="../assets/images/logo.jpg" alt="NTUA Radio Logo">
     </a>
     <button id="dark-mode-toggle">🌙</button>
     <button class="menu-button">☰</button>
@@ -64,16 +65,16 @@
   <footer>
     <div class="social-icons">
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <img src="facebook.jpg" alt="Facebook">
+        <img src="../assets/images/facebook.jpg" alt="Facebook">
       </a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <img src="instagram.jpg" alt="Instagram">
+        <img src="../assets/images/instagram.jpg" alt="Instagram">
       </a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <img src="spotify.jpg" alt="YouTube">
+        <img src="../assets/images/spotify.jpg" alt="YouTube">
       </a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <img src="tiktok.jpg" alt="Twitter">
+        <img src="../assets/images/tiktok.jpg" alt="Twitter">
       </a>
     </div>
     <p> ΡΑΔΙΟΚΥΜΑ &copy; 2025</p>
@@ -87,7 +88,7 @@
       players.forEach(player => new Plyr(player));
     });
   </script>
-  <script src="menu.js"></script>
-  <script src="script.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
